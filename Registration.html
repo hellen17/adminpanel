@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<link rel="stylesheet" type="text/css" href="Registration.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="bootstrap-3.3.6-dist/css/bootstrap.css"> -->
+
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+	 
+
+    function validate(form){
+    var x=document.myform.email.value;  
+    var password=document.myform.password.value;  
+    var atposition=x.indexOf("@");  
+    var dotposition=x.lastIndexOf(".");  
+    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+    }
+    else if(password.length<6){
+alert("Password must be at least 6 characters long.");  
+  return false;
+    }
+    
+    }
+
+
+
+	</script>
+	<style>
+		.form .login-form{
+	display: none;
+}
+	</style>
+</head>
+<body>
+ 
+<div class="login">
+<div class="form">
+	<div class="card bg-light text-dark">
+ 	 <div class="card-body">
+	<img src="avatar.png" class="avatar">
+<form name="myform" action="Registration.php" method="post" onsubmit="return validate(this);" class="registration">
+	<input type="text" name="user" placeholder="Username" required/>
+	<input type="password" name="password" placeholder="Create a Password" required/>
+	<input type="text" name="email" placeholder="you@example.com" required/>
+	
+	<input type="submit" value="CREATE" class ="button"/>
+	<p class="info">Already have an account?<a href="#">Login</a></p>
+	<!-- <p class="info">Want to register as a certified therapist?<a href="admin.html">Click here</a></p> -->
+</form>	
+<form action="login_.php" method="post" class="login-form">
+	<input type="text" name="user" placeholder="Username" required />
+	<input type="password" name="password" placeholder="Password" required />
+	<input type="submit" value="LOGIN" class ="button"/>
+	<p class="info">Not Registered?<a href="#">Sign Up</a></p>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	$('.info a').click(function(){
+		$('form').animate({height: "toggle", opacity:"toggle"}, "slow");
+	});
+</script>
+</body>
+</html>

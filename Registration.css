@@ -1,0 +1,101 @@
+body{
+	/*background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(bg1.jpeg);*/
+	background-color: #fff;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.login{
+	width: 360px;
+	padding: 10% 0 0;
+	margin: auto;
+}
+radio{
+	display:flex;
+}
+.form{
+	position: absolute;
+	z-index:1;
+	background-color:rgb(0,0,0,0.7);
+	max-width:360px;
+	margin:0 auto 100px;
+	padding: 45px;
+	text-align: center;
+}
+
+::placeholder {
+    color: black;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: black;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: black;
+}
+
+.form input{
+	font-family: sans-serif;
+	outline: none;
+	background:#f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	color: black;
+
+	
+}
+
+.form input[type="radio"] {
+	width: 30%;
+
+}
+.formText{
+	color: white;
+}
+
+.form input[type="text"], input[type="password"]{
+	border:none;
+	background: transparent;
+	outline: none;
+	border-bottom: 1px solid #fff;
+	height: 46px;
+}
+.form .button{
+	font-family: sans-serif;
+	outline: 0;
+	text-transform: uppercase;
+	background:#f45342;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;	
+	cursor: pointer;
+	border-radius: 20px;
+}
+.form .button:hover,.form .button:active{
+	background: #5D9EA2;
+}
+.form .info{
+	margin: 15px 0 0;
+	color:  #f45342;
+	font-size: 15px;
+}
+.form .info a{
+	color: #5D9EA2 ;
+}
+
+.avatar{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	left: calc(50% - 50px);
+	top: -50px;
+	max-height: 155px;
+}
